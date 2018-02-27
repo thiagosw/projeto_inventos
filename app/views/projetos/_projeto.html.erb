@@ -1,0 +1,10 @@
+<li id="projeto-<%= projeto.id %>">
+  <%= link_to gravatar_for(projeto.user, size: 50), projeto.user %>
+  <span class="user"><%= link_to projeto.user.login, projeto.user %></span>
+  <span class="content"><%= projeto.name %></span>
+  <span class="content"><%= projeto.description %></span>
+  <span class="content"><%= projeto.bug %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(projeto.created_at) %> ago.
+  </span>
+</li>
